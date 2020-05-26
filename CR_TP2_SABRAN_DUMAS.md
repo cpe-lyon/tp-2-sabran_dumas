@@ -114,14 +114,14 @@ sont bien des entiers.
 >En utilisant la fonction is_number, on fait différents tests sur les paramètres mis en entrée de notre script. La commande `$` prend en compte l'ensemble des paramètres d'entrée et on test chacun d'entre eux, que l'on met dans la variable `param`. On test si le nombre est un réel et si il est compris entre -100 et 100. Pour chaque paramètre, on incrémente un compteur global comptant le nombre de paramètres au total. Si ce dernier n'est pas égal à 3 (`$nombre_param -ne 3`) alors il y a une erreur. Ensuite, si il n'y a pas d'erreur, on peut passer dans la boucle permettant de calculer le minimum, maximum et la moyenne.
 >J'initialise par défault la valeur de `min` et de `max` au premier paramètre puis je fais des tests sur chacun pour trouver le min et le max. Je met à jour une variable `somme` qui me permettra de calculer la moyenne à la fin. Une fois le min et le max trouvé, je calcule la moyenne (grâce à la commande `$#` qui renvoi le nombre de paramètres) puis j'affiche le min, le max et la moyenne des 3 nombres.
 
->2. Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)
+2. Généralisez le programme à un nombre quelconque de paramètres (pensez à SHIFT)
 
 ![721](https://user-images.githubusercontent.com/60732798/74101110-86cb2980-4b36-11ea-847b-7e218cfd010d.JPG)
 ![722](https://user-images.githubusercontent.com/60732798/74101111-892d8380-4b36-11ea-80df-97b70a12b090.JPG)
 
 Pour généraliser ce programme, il suffit d'enlever la condition sur le nombre de paramètres pour que celà fonctionne.
 
->3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et
+3. Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies et
 stockées au fur et à mesure dans un tableau.
 
 ![731](https://user-images.githubusercontent.com/60732798/74101309-a3686100-4b38-11ea-977b-685cfa99a9fe.JPG)
