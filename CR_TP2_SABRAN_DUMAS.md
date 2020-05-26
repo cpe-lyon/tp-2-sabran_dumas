@@ -4,36 +4,52 @@
 ## Exercice 1. Variables d’environnement
 
 ### Question 1
+Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur ?
 >Bash trouve les commandes tapées par l'utilisateur dans PATH. On utilise la commande `printenv PATH`. Cette variable d'environnement contient les chemins des répertoires des commandes. Les différents chemins sont : /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin.
 
 ### Question 2
+Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans
+votre répertoire personnel ?
 >La variable HOME permet à la commande cd de nous ramener dans notre répertoire personnel. Elle contient le chemin de notre dossier personnel.
 
 ### Question 3
+Explicitez le rôle des variables LANG, PWD, OLDPWD, SHELL et _.
 >LANG permet de déterminer la langue que le Shell va utiliser pour communiquer avec l'utilisateur.
 PWD contient le chemin absolu vers le répertoire courant.
 OLDPWD contient le chemin absolu vers le répertoire courant précédent.
 SHELL détermine l’interpréteur utilisé par défaut, car on peut utiliser jusqu'à 6 shells simultanément. 
 
 ### Question 4
+Créez une variable locale MY_VAR (le contenu n’a pas d’importance). Vérifiez que la variable existe.
 >On utilise la commande `MY_VAR="coucou"` pour créer la variable MY_VAR contenant la valeur "coucou". On affiche son contenu avec `echo $MY_VAR`.
 
 ### Question 5
+Tapez ensuite la commande bash. Que fait-elle ? La variable MY_VAR existe-t-elle ? Expliquez. A la fin
+de cette question, tapez la commande exit pour revenir dans votre session initiale.
 >La commande bash permet de créer un nouveau shell (une nouvelle session). En conséquence toutes les variables locales crées précédemment ne seront pas connues de cette nouvelle session. 
 
 ### Question 6
+Transformez MY_VAR en une variable d’environnement et recommencez la question précédente. Expliquez.
 >En utilisant la commande `export MY_VAR`, MY_VAR étant maintenant une variable d'environnement, elle est globale et donc connue de tous les différentes sessions.
 
 #### Question 7
+Créer la variable d’environnement NOMS ayant pour contenu vos noms de binômes séparés par un espace.
+Afficher la valeur de NOMS pour vérifier que l’affectation est correcte.
 >On utilise la commande : `export NOMS="SABRAN DUMAS"` afin de créer une variable d'environnement NOMS qui prend comme valeur SABRAN DUMAS
 
 #### Question 8
+Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2
+sont vos deux noms) en utilisant la variable NOMS.
 >On utilise la commande `echo Bonjour à vous deux, $NOMS`, qui permet d'afficher la chaine de caractère en affichant la valeur de NOMS.
 
 #### Question 9
+Quelle différence y a-t-il entre donner une valeur vide à une variable et l’utilisation de la commande
+unset ?
 >`Unset` efface de la mémoire la variable passée en paramètre, alors que si l'on donne une valeur vide à une variable, elle va toujours exister dans la mémoire.
 
 #### Question 10
+Utilisez la commande echo pour écrire exactement la phrase : $HOME = chemin (où chemin est votre
+dossier personnel d’après bash)
 >On utilise la commande `echo '$HOME' = "$HOME"` pour afficherla phrase demandée.
 
 
