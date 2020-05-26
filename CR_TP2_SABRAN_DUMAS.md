@@ -58,7 +58,7 @@ dossier personnel d’après bash)
 >L'éxécution des programmes se fait avec la commande `nom_du_programme.sh`
 
 ### Exercice 2 : Controle du mot de passe
->Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au
+Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au
 contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par
 l’utilisateur ne doit pas s’afficher.
 
@@ -69,7 +69,7 @@ l’utilisateur ne doit pas s’afficher.
 >On compare les valeurs de `PASSWORD` et de `mdp` grâce au `$` qui prend en compte les valeurs des variables.
 
 ### Exercice 3 
->Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre
+Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètre
 est un nombre réel :
 
 ![exo3](https://user-images.githubusercontent.com/60732798/74090775-a703d580-4aaf-11ea-8f2b-2d54820af1b1.png)
@@ -77,7 +77,7 @@ est un nombre réel :
 >En utilisant la fonction is_number(), on crée une variable `var` où on lui met comme valeur le code de retour de la dernière commande, soit la dernière valeur retournée par la fonction is_number(`$?`). Ensuite, si le nombre saisi par l'utilisateur est un réel, alors la fonction renvoie 0, sinon il renvoit 1. On renvoie donc la phrase "Un réel" si `var` est égal à 0, sinon, on renvoie "Pas un réel".
 
 ### Exercice 4
->Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le
+Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le
 script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation : nom_du_script nom_utilisateur”,
 où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre
 script, le message doit changer automatiquement)
@@ -88,7 +88,7 @@ script, le message doit changer automatiquement)
 >Si le bon nombre de paramètres sont rentrés (juste le nom de l'utilisateur), on prend l'ensemble des paramètres avec `$*`. Ensuite, on prend ce nom d'utilisateur (`$param`) et on redirige l'erreur au même endroit que la sortie dans `/dev/null` (donc l'affichage du mot de passe ne se fera pas car on est dans /dev/null) grâce à la commande `id -u $param> /dev/null 2>&1`. Ainsi, on peut voir si il y a une erreur (si il est present ou non). Si il n'y a pas d'erreur, alors l'utilisateur est valide, sinon il est non valide.
 
 ### Exercice 5 
->Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que
+Écrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera que
 l’utilisateur saisit toujours un entier naturel).
 
 ![exo5](https://user-images.githubusercontent.com/60732798/74090779-baaf3c00-4aaf-11ea-97ff-814f560972f9.JPG)
@@ -96,7 +96,7 @@ l’utilisateur saisit toujours un entier naturel).
 >On crée une variable `var` que l'on initialise à 1. Dans la boucle `for`, vu que l'on fait des opérations mathématiques il doit forcément y avoir les doubles parenthèses. L'indice `i` prend les valeurs de  1 à la valeur saisie par l'utilisateur puis on actualise la valeur de `var`.
 
 ### Exercice 6
->Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner.
+Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner.
 Le programme écrira ”C’est plus !”, ”C’est moins !” ou ”Gagné !” selon les cas (vous utiliserez $RANDOM).
 
 ![exo6](https://user-images.githubusercontent.com/60732798/74100276-3c917a80-4b2d-11ea-8c27-fca63b279499.JPG)
@@ -104,7 +104,7 @@ Le programme écrira ”C’est plus !”, ”C’est moins !” ou ”Gagné !�
 >On prend un nombre aléatoire entre 1 et 1000 avec la ligne `$RANDOM % 1000 + 1`. On demande à l'utilisateur de proposer un nombre que l'on stockera dans la variable `Nombre_utilisateur`. Tant que les 2 nombres ne sont pas égaux (condition de la boucle while `$val1 -ne $val2`), si le nombre saisi par l'utilisateur est plus petit que le nombre à trouver (`$val1 -lt $val2`), alors on affiche une phrase et le prochain nombre saisi par l'utilisateur actualisera la valeur de la variable `Nombre_utilisateur`.
 
 ### Exercice 7 
->1. Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et affiche le min, le max
+1. Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et affiche le min, le max
 et la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètres
 sont bien des entiers.
 
