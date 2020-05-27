@@ -56,7 +56,8 @@ dossier personnel d’après bash)
 ## Programmation Bash 
 >La compilation des programmes se fait avec la commande `chmod u+x nom_du_programme.sh`
 >L'éxécution des programmes se fait avec la commande `nom_du_programme.sh`
-`#!/bin/bash` #! est appelée shebang : elle indique à l’OS que le fichier est un
+
+>`#!/bin/bash` #! est appelée shebang : elle indique à l’OS que le fichier est un
 script. Juste derrière, on indique le chemin vers un interpréteur capable
 d’exécuter le script
 ### Exercice 2 : Controle du mot de passe
